@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <body>
 
 <nav class="navbar navbar-dark bg-inverse">
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -30,7 +31,15 @@
 
   </div>
 </nav>
-  <body>
+
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
     <%= yield %>
       </body>
 </html>
