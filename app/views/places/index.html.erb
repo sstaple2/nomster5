@@ -1,6 +1,6 @@
 <% @places.each do |place| %>
-  <div class="booyah-box col-xs-11 col-xs-offset-1">
-    <h1><%= place.name %></h1>
+  <div class="booyah-box col-xs-10 offset-xs-1">
+    <h1><%= link_to place.name, place_path(place) %></h1>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
 
@@ -11,6 +11,6 @@
   </div>
 <% end %>
 
-<div class="col-xs-6 offset-xs-5"
+<div class="col-xs-10 offset-xs-5"
   <%= will_paginate @places, :renderer =>WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
