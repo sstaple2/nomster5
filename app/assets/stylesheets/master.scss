@@ -30,6 +30,9 @@ body {
   height: 300px;
 }
 
+.clear {
+  clear: both;
+}
 
 .navbar, .navbar-dark {
   background: image_url('escheresque.png');
