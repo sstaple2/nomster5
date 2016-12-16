@@ -4,5 +4,7 @@
 <i><%= @place.address %></i>
 <br /><br />
 <p><%= @place.description %></p>
-
+<div class="pul right">
+  <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+  <%= link_to 'Destory', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
 </div>
