@@ -34,6 +34,17 @@ body {
   clear: both;
 }
 
+.container {
+   width: auto;
+   height: auto;
+}
+
+/* resize images */
+.container img {
+   width: 100%;
+   height: auto;
+}
+
 .navbar, .navbar-dark {
   background: image_url('escheresque.png');
   border-radius: 0;
